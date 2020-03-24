@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="Main Content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+  </RelativeLayout>
+
+  <LinearLayout
+    android:id="@+id/sidebarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#60000000"
+    android:orientation="horizontal"
+    app:behavior_peekWidth="56dp"
+    app:layout_behavior="net.huseyinturan.SideSheetBehavior">
+
+    <ImageButton
+      android:id="@+id/btn_close_sidebar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@null"
+      android:padding="15dp"
+      android:scaleType="fitCenter"
+      android:src="@drawable/ic_arrow_open" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:gravity="center"
+      android:text="SideSheet!" />
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
