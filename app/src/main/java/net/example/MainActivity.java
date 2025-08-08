@@ -6,8 +6,9 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import net.huseyinturan.SideSheetBehavior.SideSheetCallback;
-import net.huseyinturan.SideSheetBehavior;
+import com.google.android.material.sidesheet.SideSheetBehavior;
+import com.google.android.material.sidesheet.SideSheetCallback;
+
 
 public class MainActivity extends AppCompatActivity {
   private LinearLayout mSidebarLayout;
@@ -22,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
     mSidebarButton = findViewById(R.id.btn_close_sidebar);
 
     SideSheetBehavior sideSheetBehavior = SideSheetBehavior.from(mSidebarLayout);
-    sideSheetBehavior.setHideable(false);
-    sideSheetBehavior.setSideSheetCallback(new SideSheetCallback() {
+    sideSheetBehavior.addCallback(new SideSheetCallback() {
       @Override
       public void onStateChanged(@NonNull View bottomSheet, int newState) {
 
